@@ -20,7 +20,7 @@
 			if (lunch.length != 0) {
 				return lunch;
 			} else {
-				throw new Error("No food today (${dateString}) :(");
+				throw new Error("No food today (${dateString}) 😢");
 			}
 		} else {
 			throw new Error("Upstream error!");
@@ -32,8 +32,8 @@
 	}
 </script>
 
+<main style="text-align: center;">
 <button on:click={handleClick}> Hvað er í hádeginu? </button>
-
 {#await promise}
 	<p>...searching</p>
 {:then lunch}
@@ -44,3 +44,4 @@
 {:catch error}
 	<p style="color: red">{error.message}</p>
 {/await}
+</main>
