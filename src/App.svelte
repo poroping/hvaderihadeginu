@@ -32,6 +32,12 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Hvað er í hádeginu?</title>
+	<meta name="robots" content="noindex nofollow" />
+	<html lang="en" />
+</svelte:head>
+
 <main style="text-align: center;">
 <button on:click={handleClick}> Hvað er í hádeginu? </button>
 {#await promise}
